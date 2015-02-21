@@ -6,3 +6,5 @@ The tile will show the number for nearby bombs. If there is no number, then ther
 Functions to be build after two hour: changing board size, bomb amount, bomb image after click, restart game button, placing flag function, winning/losing notification. 
 
 It was fun to do it in short period of time! Let's play Minesweeper together!
+
+![Screenshot of the 2hr-MineSweeper](minesweeper.png)
