@@ -32,13 +32,13 @@ var fillSquares = function(array){
 
 var clicked = function(event){
 	console.log($(event.target).attr("data"));
-  var row = $(event.target).attr("data").substring(0,1);
-  var col = $(event.target).attr("data").substring(3,4);
+  var row = $(event.target).attr("data").split("--")[0];
+  var col = $(event.target).attr("data").split("--")[1];
 
   value = board[row][col];
   if(value === 0){
     $(event.target).css({
-      "background":"green"
+      "background":"white"
     })
   } else if (value >0){
     $(event.target).css({

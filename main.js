@@ -1,5 +1,5 @@
 // Decide board size n
-var n = 10;
+var n = 15;
 var bombNum = n*n/2;
 
 var randomfun = function (){
