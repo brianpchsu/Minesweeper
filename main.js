@@ -49,7 +49,7 @@ for (var i = 0; i<n; i++){
         }
         else {
            board[i][j] = checkBombNum(board[i][j-1]) + checkBombNum(board[i][j+1])
-              + checkBombNum(board[i-1][j-1])+ checkBombNum(board[i-1][j]);
+              + checkBombNum(board[i-1][j-1])+ checkBombNum(board[i-1][j] + checkBombNum(board[i-1][j+1]));
         }
       }
       else {

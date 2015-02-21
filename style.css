@@ -15,4 +15,5 @@ span{
 	float: left;
 	min-width: 20px !important;
 	min-height: 20px !important;
+  text-align: center;
 }
