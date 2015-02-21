@@ -1,6 +1,5 @@
 // Decide board size n
-var n = 15;
-var bombNum = n*n/2;
+var n = 10;
 
 var randomfun = function (){
   return Math.floor(Math.random()*n)%3? 0: -1;
@@ -74,35 +73,9 @@ for (var i = 0; i<n; i++){
   }
 }
 
-//
-var afterClicked = function(event){
-  console.log($(event.target).attr("data"));
-  var row = $(event.target).attr("data").substring(0,1);
-  var col = $(event.target).attr("data").substring(3,4);
-
-  value = board[row][col];
-  if(value === 0){
-    $(event.target).css({
-      "background":"green"
-    })
-  } else if (value >0){
-    $(event.target).css({
-      "background":"white"
-    })
-    $(event.target).text(value);
-  } 
-
-  else if(value === 1){
-  obj.css({
-    "background":"green"
-  })
-
-  }
-}
-
-
-///
 console.log(board);
+
+//Testing
 // for (var i = 0; i<n; i++){
 //   for (var j = 0; j< n; j++){
 //     if (board[i][j] !== -1){

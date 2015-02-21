@@ -1,6 +1,5 @@
 
 array = board;
-
 var gridSize = array[0].length;
 
 $(document).ready(function(){
@@ -10,28 +9,21 @@ $(document).ready(function(){
 		'height': width+'px'
 	});
 	fillSquares(array);
-})
+});
 
-var createSpan = function(){
-	var obj = {};
-
-	return obj;
-}
 
 var fillSquares = function(array){
 	for (var row = 0; row < array.length; row++) {
 		for (var col = 0; col < array[row].length; col++) {
-			array[row][col]
 			var obj = $("<span data="+ row + "--" + col+ "></span>");
 			$(".main").append( obj);
 			obj.click(clicked);
-		};
-	};
-}
-
+		}
+	}
+};
 
 var clicked = function(event){
-	console.log($(event.target).attr("data"));
+	// console.log($(event.target).attr("data"));
   var row = $(event.target).attr("data").split("--")[0];
   var col = $(event.target).attr("data").split("--")[1];
 
@@ -39,18 +31,17 @@ var clicked = function(event){
   if(value === 0){
     $(event.target).css({
       "background":"white"
-    })
+    });
   } else if (value >0){
     $(event.target).css({
       "background":"white"
-    })
+    });
     $(event.target).text(value);
   } 
 
   else if(value === -1){
   $(event.target).css({
       "background":"red"
-    })
-
+    });
   }
-}
+};
